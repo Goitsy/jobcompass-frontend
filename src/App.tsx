@@ -22,7 +22,7 @@ const App = () => {
         <Route path="/auth/signin" element={<SignInPage />} />
         <Route path="/auth/register" element={<RegisterPage />} />
         <Route
-          path="home"
+          path="/home"
           element={
             <ProtectedRoute>
               <HomePage />
@@ -30,7 +30,7 @@ const App = () => {
           }
         />
         <Route
-          path="analytics"
+          path="/analytics"
           element={
             <ProtectedRoute>
               <AnalyticsPage />
@@ -38,7 +38,7 @@ const App = () => {
           }
         />
         <Route
-          path="settings"
+          path="/settings"
           element={
             <ProtectedRoute>
               <SettingsPage />
