@@ -5,10 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "NODE_OPTIONS='--max-old-space-size=4096' tsc -b && vite build",
+    "build": "NODE_OPTIONS='--max-old-space-size=8192' tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "start": "npm run build && serve -s dist -l 0.0.0.0:$PORT"
+    "start": "npm run build && serve -s dist -l $PORT"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
