@@ -1,50 +1,115 @@
-# React + TypeScript + Vite
+# JobCompass: Job Application Tracking Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![alt text](./src/assets/office.jpeg)
 
-Currently, two official plugins are available:
+## Project Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+JobCompass is a comprehensive web application designed to help job seekers efficiently track and manage their job applications throughout the entire job hunting process. Built with modern web technologies, the platform provides users with powerful tools to organize, monitor, and analyze their job search journey.
 
-## Expanding the ESLint configuration
+## Key Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Job Application Tracking
 
-- Configure the top-level `parserOptions` property like this:
+  - Add, edit, and delete job applications
+  - Track application status (Applied, Interview, Offer, Rejected)
+  - Store detailed job application information
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- Analytics Dashboard
+
+  - Visualize job application statistics
+  - Track application status distribution
+  - Monitor job search progress
+
+- User Authentication
+
+  - Secure user registration and login
+  - Firebase authentication integration
+  - Protected routes for personalized experience
+
+- Customizable User Experience
+  - Dark and light theme modes
+  - Personalized user settings
+  - Responsive design for multiple devices
+
+## Tech Stack
+
+### Frontend
+
+- React (TypeScript)
+- React Router for navigation
+- Material-UI for component design
+- Axios for API communication
+- Chart.js for data visualization
+
+### Backend
+
+- Node.js with Express
+- MongoDB for database
+- Mongoose for data modeling
+- Firebase Authentication
+- JWT for secure authentication
+- Nodemailer for email notifications
+
+### Additional Technologies
+
+- Cloudinary for image uploads
+- Firebase Admin SDK
+- Bcrypt for password hashing
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v18+)
+- npm or yarn
+- MongoDB
+
+### Installation
+
+1. Clone the repository
+2. Install frontend dependencies:
+   ```bash
+   cd frontend
+   npm install
+   ```
+3. Install backend dependencies:
+   ```bash
+   cd backend
+   npm install
+   ```
+4. Set up environment variables
+5. Run the application
+   - Frontend: `npm run dev`
+   - Backend: `npm run dev`
+
+## Project Structure
+
+```
+JobCompass/
+│
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── routes/
+│   │   └── state/
+│
+└── backend/
+    ├── models/
+    ├── routes/
+    └── server.js
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Future Enhancements
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- Job application email reminders
+- Integration with job search platforms
+- Advanced filtering and search
+- More detailed analytics
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is open-source and available under the License.
